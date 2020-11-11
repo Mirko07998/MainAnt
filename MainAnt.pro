@@ -12,9 +12,11 @@ TARGET = MainAnt
 TEMPLATE = app
 
 
-SOURCES += src/main.cpp\
-        src/mainwindow.cpp
+SOURCES +=  src/main.cpp\
+            src/mainwindow.cpp \
+            src/parser.cpp
 
-HEADERS  += headers/mainwindow.h
+HEADERS  += headers/mainwindow.h \
+            headers/parser.h
 
 FORMS    += mainwindow.ui
