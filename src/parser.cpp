@@ -14,12 +14,12 @@ QString parser::getInput()
 }
 
 void parser::compileProgramm(){
-   text = std::string("#include <iostream>\n") +
+   text = std::string("#include <iostream>\n #include <cstdio>\n") +
           std::string("int main(){\n") +
            std::string("std::cout<< \"") +
            input.toUtf8().constData() +
            std::string("\"<<std::endl;\n")+
-           std::string("return 0;\n}");
+           std::string("getchar(); return 0;\n}");
 
    std::ofstream fdata;
    fdata.open("../MainAnt/GeneratedCode/code.cpp");
@@ -28,5 +28,6 @@ void parser::compileProgramm(){
 };
 void parser::runProgramm(){
     system("g++ ../MainAnt/GeneratedCode/code.cpp");
-    system("../MainAnt/GeneratedCode/a.out");
+    system("cd ../MainAnt/GeneratedCode");
+    system("a.exe");
 };
