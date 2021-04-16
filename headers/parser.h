@@ -8,7 +8,7 @@ public:
     parser();
 
     void setInput(QString text);
-    QString getInput();
+      QString getInput();
     void compileProgramm();
     void runProgramm();
     void parseGraph();
